@@ -1,0 +1,26 @@
+{
+	"name": "PL_EXECUTE_PL_SWITCH_CPY_DELETE",
+	"properties": {
+		"activities": [
+			{
+				"name": "Execute Pipeline1",
+				"type": "ExecutePipeline",
+				"dependsOn": [],
+				"policy": {
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"pipeline": {
+						"referenceName": "PL_SWITCH_CPY_DELETE",
+						"type": "PipelineReference"
+					},
+					"waitOnCompletion": true
+				}
+			}
+		],
+		"annotations": [],
+		"lastPublishTime": "2026-04-14T13:52:49Z"
+	},
+	"type": "Microsoft.DataFactory/factories/pipelines"
+}

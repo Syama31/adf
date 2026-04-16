@@ -1,0 +1,27 @@
+{
+	"name": "adls_delete",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "AzureDataLakeStorage10",
+			"type": "LinkedServiceReference"
+		},
+		"parameters": {
+			"filename": {
+				"type": "string"
+			}
+		},
+		"annotations": [],
+		"type": "Binary",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobFSLocation",
+				"fileName": {
+					"value": "@dataset().filename",
+					"type": "Expression"
+				},
+				"fileSystem": "inputexecute"
+			}
+		}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}
